@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify -o public/application.bundle.js -t [ babelify --presets [ es2015 ] ] client/application.js",
-    "watch": "watchify -o public/application.bundle.js -t [ babelify --presets [ es2015 ] ] client/application.js"
+    "watch": "watchify -o public/application.bundle.js -t [ babelify --presets [ es2015 ] ] client/application.js",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
